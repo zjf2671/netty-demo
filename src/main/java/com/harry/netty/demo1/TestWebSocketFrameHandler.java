@@ -51,13 +51,15 @@ public class TestWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         System.out.println("handlerAdded:" + ctx.channel().id().asLongText());
         channelGroup.add(ctx.channel());
-        System.out.println(ctx.channel().id().asLongText()+"在线人数："+channelGroup.size());
+        String message = ctx.channel().id().asLongText()+"加入，在线人数为：" + channelGroup.size();
+        channelGroup.writeAndFlush(new TextWebSocketFrame(message));
     }
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         System.out.println("handlerRemoved:"+ctx.channel().id().asLongText());
-        System.out.println("在线人数："+channelGroup.size());
+        String message = ctx.channel().id().asLongText()+"离开，在线人数为：" + channelGroup.size();
+        channelGroup.writeAndFlush(new TextWebSocketFrame(message));
     }
 
     @Override
