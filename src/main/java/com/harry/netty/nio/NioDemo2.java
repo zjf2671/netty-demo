@@ -15,7 +15,7 @@ import java.util.Set;
  * @Author Harry
  * @Date 2020/8/13 15:32
  **/
-public class nioDemo2 {
+public class NioDemo2 {
 
     public static void main(String[] args) throws IOException {
 
