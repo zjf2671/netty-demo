@@ -11,7 +11,7 @@ tasks.withType(JavaCompile) {
 
 repositories {
     maven {
-        url 'http://192.168.0.168:8081/repository/maven-public/'
+        url 'https://maven.aliyun.com/repository/public'
     }
 //    mavenCentral()
 }
