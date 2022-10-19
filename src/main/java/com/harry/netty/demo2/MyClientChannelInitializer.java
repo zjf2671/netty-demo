@@ -9,7 +9,7 @@ import io.netty.channel.socket.SocketChannel;
  * @Author Harry
  * @Date 2020/9/15 11:33
  **/
-public class MyClientChannelInitializar extends ChannelInitializer<SocketChannel> {
+public class MyClientChannelInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
